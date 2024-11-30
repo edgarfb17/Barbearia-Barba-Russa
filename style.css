@@ -1,0 +1,966 @@
+html{
+    font-size: 62.5%;
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+    margin: 0 auto;
+    font-family: Montserrat-Regular;
+    color: white;
+}
+
+h2{
+    font-size: 3.0rem;
+    font-family: Bungee-inline;
+    color: rgb(122, 56, 56);
+    display: flex;
+    align-items: center;
+}
+
+i{
+    font-size: 1.0rem;
+    margin: 26px 10px;
+}
+
+@font-face{
+    font-family: Bungee-inline;
+    src: url("assets/Fontes/BungeeInline-Regular.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url("assets/Fontes/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: SpaceGrotesk-VariableFont_wght;
+    src: url("assets/Fontes/SpaceGrotesk-VariableFont_wght.ttf");
+}
+
+.alinhamento-conteudo{
+    max-width: 1224px;
+    margin: 0 auto;
+}
+
+/* header */
+
+header{
+    width: 100%; 
+    position: fixed; 
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(265, 265, 265, 0.2);
+    height: 80px;
+    font-size: 1.4rem;
+    text-align: center;
+    transition: height 800ms, background-color 800ms;
+    z-index: 5;
+}
+
+/*header transition*/
+
+.transition{
+    height: 70px;
+    background-color: rgb(34, 42, 53);
+}
+
+.transition img{
+    height: 70px;
+    width: 70px;
+}
+
+/*header transition*/
+
+header nav{
+    width: 100%;
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+    font-family: Montserrat-Regular;
+    width: 100%;
+    min-width: 799px;
+    padding: 0;
+}
+
+header li{
+    margin-left: 30px;  
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover{
+    color: rgb(93, 139, 158);
+}
+
+header #home{
+    list-style: none;
+}
+
+header .reserva-header{
+    font-size: 1.6rem;
+    font-family: Montserrat-Regular;
+    background-color: rgb(134, 53, 53);
+    height: 100%;
+    width: 150px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .reserva-header:hover{
+    color: white;
+    background-color: rgb(151, 20, 20);
+}
+
+header img{
+    width: 70px;
+    height: 70px;
+    transition: height 800ms, width 800ms;
+}
+
+.header-topo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    height: 100%;
+    max-width: 1024px;
+}
+
+/* header */
+
+/* banner */
+
+.background-banner{
+    background-image: url("assets/Imagem\ faxada1.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner{
+    background-color: rgba(26, 25, 25, 0.555);
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.banner h1{
+    text-align: center;
+    line-height: 35px;
+    font-size: 7.0rem;
+    font-family: Bungee-inline;
+    margin: 0;
+    color: rgb(134, 53, 53);
+}
+
+
+.banner-txt{
+    margin-top: 30px;
+    font-size: 3.0rem;
+    letter-spacing: 8px;
+    font-family: Montserrat-Regular;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner img{
+    width: 250px;
+    margin: 0;
+}
+
+/* banner */
+
+/* sobre */
+
+.sobre{
+    display: flex;
+    width: 100%;
+    height: 900px;
+}
+
+.background-txt-sobre{
+    background-color: rgb(71, 71, 71);
+    width: 50vw;
+    height: 100%;
+    padding: 100px 40px 0 100px ;
+    box-sizing: border-box;
+}
+
+.txt-sobre{
+    width: 100%;
+    height: 100%;
+}
+
+.txt-sobre h2{
+    margin: 0;
+}
+
+.txt-sobre p {
+    margin: 15px 0 50px 0 ;
+    line-height: 35px;
+}
+
+.galeria-sobre{
+    width: 50vw;
+    height: 100%;
+    position: relative;
+}
+
+.imgs-sobre{
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 800ms;
+}
+
+.imgs-sobre.selected{
+    opacity: 1;
+}
+
+/* sobre */
+
+/* feedbacks-divs*/
+
+.aspas-feeds{
+    font-size: 8.0em;
+    color: brown;
+    margin: 0;
+    height: 120px;
+}
+
+.background-feedback1{
+    background-image: url("assets/feedback1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.background-feedback2{
+    background-image: url("assets/feedback2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.background-feedback3{
+    background-image: url("assets/feedback3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+}
+
+.feedback-box{
+    background-color: rgba(26, 25, 25, 0.705);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 1.7em;
+    text-align: center;
+    font-family: SpaceGrotesk-VariableFont_wght;
+}
+
+.feedback-box span{
+    color: rgb(153, 152, 152);
+    font-size: 0.7em;
+}
+
+/* feedbacks-divs*/
+
+/* serviços */
+
+.servicos{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.servicos-box{
+    color: black;
+    padding: 50px 0;
+    width: 80%;
+}
+
+.servicos img{
+    width: 170px;
+    height: 200px;
+}
+
+.servicos-icones .img-alisamento{
+    width: 110px;
+}
+
+.servicos-icones{
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 30px 0;
+}
+
+.servicos-icones-galeria{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* serviços */
+
+/* feedback2 */
+
+.feedback2{
+    background-image: url("assets/feedback2_resized.jpg");
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+}
+
+.feedback2 p{
+    margin: 0;
+}
+
+/* feedback2 */
+
+/* hrs-atendimento */
+
+.atendimento{
+    background-color: rgb(55, 69, 88);
+    display: flex;
+    justify-content: center;
+}
+
+.atendimento-box{
+    padding: 50px 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-atendimento{
+    width: 100%;
+    color: rgb(5, 116, 163);
+}
+
+.atendimento-box #reservar{
+    color: rgb(5, 116, 163);
+    border: 2px solid rgb(5, 116, 163);
+}
+
+.atendimento-box #reservar:hover{
+    background-color: rgb(5, 116, 163);
+    color: white;
+}
+
+.horarios-atendimento{
+    margin: 50px auto;
+    display: flex;
+    justify-items: space-evenly;
+    width: 90%;
+    min-width: 1180px;
+}
+
+.divs-horarios{
+    box-shadow: 2px 3px 5px black; 
+    margin: 0px auto;
+    text-align: center;
+    padding: 30px 40px;
+    color: rgb(99, 96, 96);
+    background-color: white;
+    border-radius: 0px 10px 0px 10px;
+    text-transform: uppercase;
+}
+
+.divs-horarios h2{
+    font-family: Bungee-inline;
+    color: rgb(5, 116, 163);
+    margin: 0;
+}
+
+
+.horarios-atendimento div:hover{
+    background-color: rgb(1, 170, 243);
+    color: white;
+    transition: 0.4s;
+}
+
+/* hrs-atendimento */
+
+/* bnt-reservar */
+
+.reservar{
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    width: 300px;
+    height: 70px;
+    border: solid 2px rgb(122, 56, 56);
+    text-align: center;
+    color: rgb(122, 56, 56);
+    font-size: 2.0rem;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.reservar i{
+    font-size: 2.0rem;
+}
+
+.reservar:hover{
+    background-color: rgb(122, 56, 56);
+    color: white;
+    transition: 0.5s;
+}
+
+/* bnt-reservar */
+
+/* preços */
+
+.precos{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.precos-box{
+    display: flex;
+    width: 100%;
+    height: 900px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 0 10px;
+}
+
+.titulo-precos{
+    width: 100%;
+}
+
+.background-div-precos{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+}
+
+.div-quadro-precos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-preco span{
+    color: grey;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.div-preco{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    font-size: 1.5em;
+    font-family: SpaceGrotesk-VariableFont_wght;
+    overflow: hidden;
+}
+
+.div-preco p{
+    position: relative;
+}
+
+.pre{
+    background-color: white;
+    padding-left: 20px;
+    line-height: 26px;
+}
+
+
+.serv::after{
+    content: '';
+    position: absolute;
+    width: 100vw;
+    bottom: 30%;
+    margin: 0 20px;
+    left: 100%;
+    opacity: 0.6;
+    border-bottom: 1px dashed #777
+}
+
+.box-preco{
+    width: 600px;
+    height: 700px;
+    margin: 40px 0;
+    background-size: cover;
+    background-position: center;
+}
+
+/* preços */
+
+/* instagram */
+
+.background-insta{
+    background-color: grey;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.instagram p{
+    margin: 0;
+    color: black;
+    text-align: right;
+}
+
+.instagram a{
+    color: rgb(122, 56, 56);
+    font-weight: bold;
+}
+
+.instagram-galeria{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider-instagram{
+    width: 200%;
+    display: flex;
+}
+
+.slide-galeria{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.slide-galeria img{
+    width: 330px;
+}
+
+/* instagram */
+
+/*wpp icon*/
+
+.wppIcon{
+    background-image: url("assets/wpp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+}
+
+
+/*wpp icon*/
+
+/* footer */
+
+footer{
+
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    background-color: rgb(34, 42, 53);
+}
+
+.contato{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.contato iframe{
+    width: 35%;
+    height: 800px;
+}
+
+.background-mensagem-email{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+}
+
+.mensagem-email{
+    width: 100%;
+    height: 100%;
+}
+
+.input{
+    height: 30px;
+}
+
+.input.msg{
+    height: 60px;
+}
+
+.div-contato{
+    width: 30%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(42, 52, 66);
+}
+
+.titulo-contato{
+    margin: 0;
+    justify-content: center;
+}
+
+.div-contato img{
+    width: 180px;
+}
+
+.div-contato p{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin: 0;
+    padding: 20px 80px;
+}
+
+.div-contato #reservar{
+    color: rgb(5, 116, 163);
+    border: 2px solid rgb(5, 116, 163);
+}
+
+.div-contato #reservar:hover{
+    background-color: rgb(5, 116, 163);
+    color: white;
+}
+
+.div-contato h2{
+    color: rgb(5, 116, 163);
+}
+
+.links-contato{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.links-contato i{
+    font-size: 3.5rem;
+    color: white;
+    text-align: center;
+}
+
+.links-contato i[class="fab fa-facebook-square"]:hover{
+    color: rgb(5, 116, 163);
+    transition: 0.5s;
+}
+
+.links-contato i[class="fab fa-instagram"]:hover{
+    color: rgb(94, 73, 53);
+    transition: 0.5s;
+}
+
+.links-contato i[class="fab fa-whatsapp-square"]:hover{
+    color: rgb(26, 179, 6);
+    transition: 0.5s;
+}
+
+.copy{
+    color: rgb(102, 125, 156);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+/* footer */
+
+/* media querys */
+
+@media (max-width: 1450px){
+    .horarios-atendimento{
+        min-width: 260px;
+        max-width: 500px;
+        max-height: 900px;
+        flex-direction: column;
+    }
+
+    .divs-horarios{
+        margin: 0px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 0;
+        padding: 20px;
+        height: 100px;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1366px){
+    header ul, header .reserva-header{
+        font-size: 1.5rem;
+    }
+
+    header ul{
+        min-width: 725px;
+    }
+
+    .banner h1{
+        font-size: 4.7rem;
+    }
+
+    .banner img{
+        width: 180px;
+    }
+
+    .banner-txt{
+        font-size: 2.6rem;
+    }
+
+    header img{
+        width: 50px;
+        height: 50px;
+    }
+
+    header{
+        height: 60px;
+    }
+
+    .transition img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .transition{
+        height: 60px;
+    }
+
+    .reservar{
+        width: 270px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+
+    .div-contato img{
+        width: 150px;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+}
+
+@media(max-width: 1024px){
+
+    .alinhamento-conteudo
+    {
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 850px){
+    .galeria-sobre{
+        display: none;
+    }
+
+    .background-txt-sobre{
+        width: 100%;
+    }
+
+    .servicos-icones-galeria{
+        flex-direction: column;
+    }
+
+    .contato{
+        flex-direction: column;
+    }
+
+    .contato iframe, .contato .background-mensagem-email, .contato .div-contato{
+        width: 100%;
+        height: 500px;
+    }
+
+    .mensagem-email{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mensagem-email h2{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 769px){
+    i{
+        font-size: 0.7rem ;
+    }
+
+    .alinhamento-conteudo{
+        max-width: 500px;
+    }
+}
+
+@media(max-width: 660px){
+    i{
+        font-size: 0.7rem ;
+    }
+
+    .banner h1{
+        font-size: 3.0rem
+    }
+
+    .banner h1 img{
+        width: 110px;
+    }
+
+    .banner-txt{
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+    }
+
+    h2{
+        font-size: 2.4rem;
+        width: 100%;
+        line-height: 30px;
+    }
+
+    .background-txt-sobre{
+        padding: 60px 20px 0px 40px;
+    }
+
+    .feedback-box p, .feedback-box span{
+        font-size: 2.0rem;
+    }
+
+    .feedback-box .aspas-feeds{
+        font-size: 18rem;
+    }
+
+    .servicos-box img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .servicos-box p{
+        font-size: 1.8rem;
+    }
+
+    .servicos-icones{
+        padding: 5px 0;
+    }
+
+    .servicos-icones .img-alisamento{
+        width: 90px;
+        height: 130px;
+    }
+
+    .precos-box , .precos-box span{
+        font-size: 1.4rem;
+    }
+
+    .Srelaxamento{
+        font-size: 1.9rem;
+    }
+
+    .Scombo{
+        font-size: 1.7rem;
+    }
+
+    .wppIcon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .instagram{
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
+    .div-contato img{
+        width: 150px;
+    }
+
+    .reservar{
+        height: 60px;
+        width: 270px;
+    }
+}   
+
+
